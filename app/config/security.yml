@@ -1,0 +1,53 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/security.html
+security:
+
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
+    # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        in_memory:
+            memory:
+                users:
+                    admin: { password: '%admin_password%', roles: [ 'ROLE_ADMIN' ] }
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        admin:
+            pattern: ^/admin
+            provider: in_memory
+            form_login:
+                login_path: admin_login
+                check_path: admin_login
+                remember_me: true
+                default_target_path: /admin/dashboard
+            logout:
+                path: admin_logout
+                target: admin_login
+            remember_me:
+                secret: '%secret%'
+                lifetime: 604800 # 1 week in seconds
+                path:     /admin
+                domain:   ~
+            anonymous: ~
+
+        main:
+            pattern: ^/
+            anonymous: ~
+
+    access_control:
+        - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+
+    role_hierarchy:
+        ROLE_ADMIN_CONTENT:
+            - ROLE_ADMIN_DEVIS_ALL
+
+        ROLE_ADMIN:             [ROLE_ADMIN_CONTENT]
+        ROLE_SUPER_ADMIN:       [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+

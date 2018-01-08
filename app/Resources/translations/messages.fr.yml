@@ -1,0 +1,122 @@
+header:
+  accroche:
+    first: Une assurance vétérinaire
+    second: fondée par un vétérinaire
+  help: Besoin d'aide ? (appel gratuit)
+  phone: 09 70 100 500
+
+footer:
+  contact: Contact
+  legals: Mentions légales
+  cgu : CGU
+  partners: Nos partenaires
+  sitemap: Plan du site
+
+home:
+  accroche: 'Assurance animaux : chien, chat, NAC. Protégez-les pour mieux vivre ensemble'
+
+  bloc-image:
+    title: Vos frais vétérinaires remboursés!
+    btn:
+      title: Faire un devis
+      subtitle: 'Gratuit et rapide : en 2 minutes !'
+
+  bloc-reassurance:
+    title: Votre animal protégé à 100%
+    bloc1:
+        img-css: medecine-badge
+        title: Prévention
+        paragraph: <ul><li>Consultation vétérinaire</li><li>Vaccination</li><li>Stérilisation</li><li>Détartrage</li></ul>
+    bloc2:
+        img-css: disease-badge
+        title: Maladie
+        paragraph: <ul><li>Pharmacie</li><li>Médicaments</li><li>Examen / Analyse</li><li>Physiothérapie</li></ul>
+    bloc3:
+        img-css: accident-badge
+        title: Accident
+        paragraph: <ul><li>Hospitalisation</li><li>Chirurgie</li><li>Ambulance animalière</li><li>Urgence vétérinaire</li></ul>
+    btn: Faire un devis
+
+  bloc-avantage:
+    title: Les avantages Anivéto
+    bloc1:
+        img-css: certified-veto-badge
+        title: Expertise vétérinaire
+        paragraph: Un service fondé et suivi par un vétérinaire
+    bloc2:
+        img-css: shield-badge
+        title: Une couverture à vie
+        paragraph: 'Incluant les soins classiques : vaccin, stérilisation, détartrage'
+    bloc3:
+        img-css: insurrance-badge
+        title: Une assurance sur-mesure
+        paragraph: En fonction des caractèristiques de votre animal
+    bloc4:
+        img-css: chrono-badge
+        title: Remboursement sous 72h
+        paragraph: Après validation de la feuille de soin
+
+  bloc-assurance-for-all:
+    title: Une assurance pour tous
+    subtitle: Offrez-leur le plus sûr rapidement
+    bloc1:
+      title: Assurance chien
+      img-css: dog-badge
+      btn: Faire un devis
+    bloc2:
+      title: Assurance chat
+      img-css: cat-badge
+      btn: Faire un devis
+    bloc3:
+      title: Assurance NAC
+      img-css: nac-badge
+      btn: Faire un devis
+
+  bloc-help:
+    title: Une question ? Besoin d'aide ?
+    subtitle: Nos spécialistes vous répondent
+    img-css: phone-badge-x2
+    phone: 09 70 100 500
+    free: appel gratuit
+
+profil:
+  next: Continuer
+  email: 'Saisissez votre email pour commencer :'
+  gender: Civilité
+  lastname: Nom
+  firstname: Prénom
+  email: Email
+  phone: Téléphone
+  birthday: Date de naissance
+  street: Adresse
+  postcode: Code postal
+  city: Ville
+animal:
+  name: Nom
+  gender: Sexe
+  species: Espèce
+  breed: Race
+  birthday: Date de naissance
+  isVaccinated: Vacciné
+  isIdentified: Pucé
+  isSterilized: Stérilisé
+  rate: Voir mon tarif
+
+
+app_bundle_domain_user_model_gender_gender_m: Monsieur
+app_bundle_domain_user_model_gender_gender_f: Madame
+app_bundle_domain_animal_model_gender_male: Mâle
+app_bundle_domain_animal_model_gender_female: Femelle
+app_bundle_domain_animal_model_species_cat: Chat
+app_bundle_domain_animal_model_species_dog: Chien
+app_bundle_domain_animal_model_species_rabbit: Lapin
+app_bundle_domain_animal_model_species_tortoise: Tortue
+app_bundle_domain_animal_model_species_ferret: Furet
+app_bundle_domain_animal_model_species_rodent: Rongeur
+app_bundle_domain_animal_model_species_parrot: Perroquet
+app_bundle_domain_animal_model_species_bird_cage: Cage à oiseaux
+app_bundle_domain_animal_model_species_aquarium: Aquarium
+
+app_bundle_domain_devis_model_status_just_email: Email seulement
+app_bundle_domain_devis_model_status_just_user: Compte utilisateur seulement
+app_bundle_domain_devis_model_status_send: Envoyé chez FIDANIMO

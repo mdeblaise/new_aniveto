@@ -1,0 +1,72 @@
+.mk-white {
+    color: #fff !important;
+}
+
+.mk-blue{
+    color: #24b6c6 !important;
+}
+
+.mk-help{
+    color: white;
+    background: #24b6c6 !important;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.mk-grey{
+    color:#3b3a3a !important;
+}
+
+.mk-greylight{
+    color:lightgray !important;
+}
+
+.mk-green{
+    color:#2ecc71 !important;
+}
+
+.mk-brown{
+    color:#b07761 !important;
+}
+
+.mk-bluelight{
+    color:#c2fcff !important;
+}
+
+.mk-white-bg {
+    background: #fff !important;
+}
+
+.mk-blue-bg{
+    background: #24b6c6 !important;
+}
+
+.mk-grey-bg{
+    background:#3b3a3a !important;
+}
+
+.mk-greylight-bg{
+    background:lightgray !important;
+}
+
+.mk-green-bg{
+    background:#2ecc71 !important;
+}
+
+.mk-brown-bg{
+    background:#b07761 !important;
+}
+
+.mk-bluelight-bg{
+    background:#c2fcff !important;
+}
+
+.btn-primary-green,
+.btn-primary-green:hover{
+    background:#2ecc71 !important;
+    color:#fff !important;
+}
+
+.btn-primary-green:hover{
+    background:#27ae60 !important;
+}

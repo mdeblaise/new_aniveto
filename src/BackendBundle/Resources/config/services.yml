@@ -1,0 +1,26 @@
+services:
+    admin.security.controller:
+        class: BackendBundle\Controller\SecurityController
+        arguments:
+            - '@security.authentication_utils'
+            - '@templating'
+
+    admin.devis:
+        class: BackendBundle\Admin\DevisAdmin
+        arguments:
+            - ~
+            - AppBundle\Entity\Devis
+            - ~
+        tags:
+            -
+                name: sonata.admin
+                manager_type: orm
+                label: menu.devis
+                label_translator_strategy: sonata.admin.label.strategy.underscore
+
+    devis_admin.twig_extension:
+        class: BackendBundle\Twig\DevisAdminExtension
+        arguments:
+            - '@translator'
+        tags:
+            - { name: twig.extension }

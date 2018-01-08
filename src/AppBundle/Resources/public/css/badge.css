@@ -1,0 +1,81 @@
+.sprite {
+    background: url('../img/global/sprite.png') no-repeat;
+    display: inline-block;
+}
+
+.sprite.phone-badge {
+    height: 50px;
+    width: 41px;
+    background-position: -156px -53px;
+    background-size: 50%;
+}
+
+.sprite.phone-badge-x2{
+    height:100px;
+    width:100px;
+    background-position:2px -52px;
+}
+
+.sprite.medecine-badge {
+    height: 100px;
+    width: 100px;
+    background-position: 10px -122px;
+}
+
+.sprite.disease-badge {
+    height:100px;
+    width:100px;
+    background-position: -148px -122px;
+}
+
+.sprite.accident-badge {
+    height:100px;
+    width:100px;
+    background-position:-308px -122px;
+}
+
+.sprite.chrono-badge {
+    height:100px;
+    width:113px;
+    background-position:-466px 8px;
+}
+
+.sprite.insurrance-badge {
+    height:100px;
+    width:100px;
+    background-position:-308px 8px;
+}
+
+.sprite.shield-badge {
+    height:100px;
+    width:100px;
+    background-position:-152px 8px;
+}
+
+.sprite.certified-veto-badge {
+    height:100px;
+    width:100px;
+    background-position:2px 8px;
+}
+
+
+
+
+
+.nac-badge {
+    height:250px;
+    width:250px;
+    background: url('../img/global/nac-badge.jpg') no-repeat;
+}
+
+.cat-badge {
+    height:250px;
+    width:250px;
+    background: url('../img/global/cat-badge.jpg') no-repeat;
+}
+
+.dog-badge {
+    height:250px;
+    width:250px;
+    background: url('../img/global/dog-badge.jpg') no-repeat;
+}

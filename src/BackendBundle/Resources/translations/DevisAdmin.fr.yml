@@ -1,0 +1,70 @@
+menu:
+    devis: Liste des devis
+
+filter:
+    label_created_at: Crée le
+    label_animal_species: Espèce
+    label_status: Statut
+    label_user_phone: Téléphone
+
+list:
+    label_user_gender: Civilité
+    label_user_lastname: Nom
+    label_user_firstname: Prénom
+    label_user_email: Email
+    label_user_phone: Téléphone
+    label_animal_species: Espèce
+    label_animal_name: Nom Animal
+    label_created_at: Crée le
+    label_status: Statut
+    label__action: Action
+
+show:
+    label_user_gender: Civilité
+    label_user_lastname: Nom
+    label_user_firstname: Prénom
+    label_user_email: Email
+    label_user_phone: Téléphone
+    label_user_date_of_birth: Date de naissance
+    label_user_street: Adresse
+    label_user_postcode: Code postal
+    label_user_city: Ville
+
+    label_animal_name: Nom
+    label_animal_species: Espèce
+    label_animal_breed: Race
+    label_animal_date_of_birth: Date de naissance
+    label_animal_gender: Sexe
+    label_animal_is_vaccinated: Vacciné
+    label_animal_is_identified: Pucé
+    label_animal_is_sterilized: Stérilisé
+    label_comment: Commentaire
+
+form:
+    label_status: Statut
+    label_created_at: Crée le
+    label_user__gender: Civilité
+    label_user__lastname: Nom
+    label_user__firstname: Prénom
+    label_user__email: Email
+    label_user__phone: Téléphone
+    label_user__date_of_birth: Date de naissance
+    label_user__street: Adresse
+    label_user__postcode: Code postal
+    label_user__city: Ville
+    label_animal__name: Nom
+    label_animal__gender: Sexe
+    label_animal__species: Espèce
+    label_animal__breed: Race
+    label_animal__date_of_birth: Date de naissance
+    label_animal__is_vaccinated: Vacciné
+    label_animal__is_identified: Pucé
+    label_animal__is_sterilized: Stérilisé
+    label_comment: Commentaire
+
+breadcrumb:
+    link_devis_list: Liste des devis
+
+status:
+    incomplete: Incomplet
+    send: Envoyé

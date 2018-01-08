@@ -1,0 +1,160 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="bgImage" class="section-hero">
+        <div class="section-banner">
+            <div class="container">
+                <h1 class="section-banner-title">{{ 'home.accroche'|trans }}</h1>
+            </div>
+        </div>
+        <img src="{{ asset('bundles/app/img/home/bg.jpg') }}" class="section-image-mobile">
+        <div class="container section-hero-container">
+            <div class="row no-gutters">
+                <div class="col-lg-4 col-xl-6 d-none d-lg-block d-flex align-items-center">
+
+                </div>
+                <div class="col-12 col-lg-8 col-xl-6">
+                    <div class="section-hero-title text-center">
+                        <div>
+                            <h2 class="section-hero-title-main text-uppercase text-center">
+                                {{ 'home.bloc-image.title'|trans }}
+                            </h2>
+                            <button class="btn btn-primary-green">
+                                <span class="text-uppercase font-weight-bold ">{{ 'home.bloc-image.btn.title'|trans }}</span>
+                                <br />
+                                <span>{{ 'home.bloc-image.btn.subtitle'|trans }}</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="home-reassurance" class="section-hero blue-bg pt-3 pb-3">
+        <div class="container">
+            <h2 class="white text-center pb-3">{{ 'home.bloc-reassurance.title'|trans }}</h2>
+            <div class="row white">
+                <div class="col-4 text-center">
+                    <div class="container brown-bg p-2 rounded">
+                        <div class="sprite {{ 'home.bloc-reassurance.bloc1.img-css'|trans }}"></div>
+                        <h3>{{ 'home.bloc-reassurance.bloc1.title'|trans }}</h3>
+                        {{ 'home.bloc-reassurance.bloc1.paragraph'|trans|raw }}
+                    </div>
+                </div>
+                <div class="col-4 text-center">
+                    <div class="container brown-bg p-2 rounded">
+                        <div class="sprite {{ 'home.bloc-reassurance.bloc2.img-css'|trans }}"></div>
+                        <h3>{{ 'home.bloc-reassurance.bloc2.title'|trans }}</h3>
+                        {{ 'home.bloc-reassurance.bloc2.paragraph'|trans|raw }}
+                    </div>
+                </div>
+                <div class="col-4 text-center">
+                    <div class="container brown-bg p-2 rounded">
+                        <div class="sprite {{ 'home.bloc-reassurance.bloc3.img-css'|trans }}"></div>
+                        <h3>{{ 'home.bloc-reassurance.bloc3.title'|trans }}</h3>
+                        {{ 'home.bloc-reassurance.bloc3.paragraph'|trans|raw }}
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="container text-center">
+                    <a href="{{ path('app.devis') }}" class="btn btn-large btn-primary-green text-uppercase">{{ 'home.bloc-reassurance.btn'|trans }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="home-avantage" class="section-hero white-bg pt-3 pb-3">
+        <div class="container">
+            <h2 class="brown text-center pb-3">{{ 'home.bloc-avantage.title'|trans }}</h2>
+            <div class="row">
+
+                <div class="col-3 text-center">
+                    <div class="container">
+                        <div class="sprite {{ 'home.bloc-avantage.bloc1.img-css'|trans }}"></div>
+                        <h3 class="blue">{{ 'home.bloc-avantage.bloc1.title'|trans }}</h3>
+                        <span>{{ 'home.bloc-avantage.bloc1.paragraph'|trans }}</span>
+                    </div>
+                </div>
+
+                <div class="col-3 text-center">
+                    <div class="container">
+                        <div class="sprite {{ 'home.bloc-avantage.bloc2.img-css'|trans }}"></div>
+                        <h3 class="blue">{{ 'home.bloc-avantage.bloc2.title'|trans }}</h3>
+                        <span>{{ 'home.bloc-avantage.bloc2.paragraph'|trans }}</span>
+                    </div>
+                </div>
+
+                <div class="col-3 text-center">
+                    <div class="container">
+                        <div class="sprite {{ 'home.bloc-avantage.bloc3.img-css'|trans }}"></div>
+                        <h3 class="blue">{{ 'home.bloc-avantage.bloc3.title'|trans }}</h3>
+                        <span>{{ 'home.bloc-avantage.bloc3.paragraph'|trans }}</span>
+                    </div>
+                </div>
+
+                <div class="col-3 text-center">
+                    <div class="container">
+                        <div class="sprite {{ 'home.bloc-avantage.bloc4.img-css'|trans }}"></div>
+                        <h3 class="blue">{{ 'home.bloc-avantage.bloc4.title'|trans }}</h3>
+                        <span>{{ 'home.bloc-avantage.bloc4.paragraph'|trans }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="home-for-all" class="section-hero bluelight-bg pt-3 pb-3">
+        <div class="container">
+            <h2 class="text-center pb-3">{{ 'home.bloc-assurance-for-all.title'|trans }}</h2>
+            <h3 class="brown text-center pb-3">{{ 'home.bloc-assurance-for-all.subtitle'|trans }}</h3>
+            <div class="row">
+
+                <div class="col-4 text-center">
+                    <div class="container white-bg pt-3 pb-3">
+                        <h4 class="blue">{{ 'home.bloc-assurance-for-all.bloc1.title'|trans }}</h4>
+                        <div class="{{ 'home.bloc-assurance-for-all.bloc1.img-css'|trans }}"></div>
+                        <br />
+                        <button class="btn btn-large btn-primary-green">{{ 'home.bloc-assurance-for-all.bloc1.btn'|trans }}</button>
+                    </div>
+                </div>
+
+                <div class="col-4 text-center">
+                    <div class="container white-bg pt-3 pb-3">
+                        <h4 class="blue">{{ 'home.bloc-assurance-for-all.bloc2.title'|trans }}</h4>
+                        <div class="{{ 'home.bloc-assurance-for-all.bloc2.img-css'|trans }}"></div>
+                        <br />
+                        <button class="btn btn-large btn-primary-green">{{ 'home.bloc-assurance-for-all.bloc2.btn'|trans }}</button>
+                    </div>
+                </div>
+
+                <div class="col-4 text-center">
+                    <div class="container white-bg pt-3 pb-3">
+                        <h4 class="blue">{{ 'home.bloc-assurance-for-all.bloc3.title'|trans }}</h4>
+                        <div class="{{ 'home.bloc-assurance-for-all.bloc3.img-css'|trans }}"></div>
+                        <br />
+                        <button class="btn btn-large btn-primary-green">{{ 'home.bloc-assurance-for-all.bloc3.btn'|trans }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="home-help" class="section-hero white-bg pt-3 pb-3">
+        <div class="container">
+            <h2 class="text-center pb-3">{{ 'home.bloc-help.title'|trans }}</h2>
+            <h3 class="brown text-center pb-3">{{ 'home.bloc-help.subtitle'|trans }}</h3>
+            <div class="row">
+
+                <div class="col-4 text-center">
+
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

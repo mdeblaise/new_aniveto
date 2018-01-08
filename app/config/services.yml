@@ -1,0 +1,47 @@
+services:
+
+    app.controller.devis:
+        class: AppBundle\Controller\DevisController
+        arguments:
+            - '@templating'
+            - '@router'
+            - '@form.factory'
+            - '@devis.manager'
+            - '@user.provider'
+            - '@devis.provider'
+            - '@fidanimo.manager'
+
+    devis.manager:
+        class: AppBundle\Domain\Devis\Manager
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
+            - '@devis.provider'
+
+    user.provider:
+        class: AppBundle\Domain\User\UserProvider
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
+
+    devis.provider:
+        class: AppBundle\Domain\Devis\DevisProvider
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
+
+    ## EventListeners
+    entity.timestampable_listener:
+        class: AppBundle\Entity\EventListener\TimestampableListener
+        tags:
+            - { name: doctrine.event_listener, event: prePersist, connection: default }
+            - { name: doctrine.event_listener, event: preUpdate, connection: default }
+
+    devis.timestampable_listener:
+        class: AppBundle\Entity\EventListener\DevisListener
+        tags:
+            - { name: doctrine.event_listener, event: preUpdate, connection: default }
+            - { name: doctrine.event_listener, event: postPersist, connection: default }
+
+    fidanimo.manager:
+       class: AppBundle\Domain\Fidanimo\Manager
+       arguments:
+           - "%fidanimo_api_url%"
+           - "@httplug.client.default"

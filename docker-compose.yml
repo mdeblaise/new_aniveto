@@ -1,0 +1,60 @@
+data:
+    image: busybox
+    container_name: aniveto_data
+    volumes:
+        - .:/srv
+        - ./docker/conf/nginx_vhost.conf:/etc/nginx/sites-enabled/my_app.conf
+        - ./docker/.home-developer:/home/developer
+        - ./docker/postgres/data:/var/lib/postgresql/data/pgdata
+
+webserver:
+    image: greg0ire/nginx
+    container_name: aniveto_webserver
+    volumes_from:
+        - data
+    links:
+        - appserver
+    env_file:
+        - ./docker/docker-compose.env
+    environment:
+        - DNSDOCK_IMAGE=web
+
+appserver:
+    image: meuhmeuhconcept/php-fpm
+    container_name: aniveto_appserver
+    volumes_from:
+        - data
+    links:
+        - database
+    env_file:
+        - ./docker/docker-compose.env
+    environment:
+        - DNSDOCK_IMAGE=app
+    restart: always
+
+console:
+    image: meuhmeuhconcept/php-console
+    container_name: aniveto_console
+    volumes_from:
+        - data
+    volumes:
+        - $SSH_AUTH_SOCK:/tmp/agent.sock
+    links:
+        - database
+    env_file:
+        - ./docker/docker-compose.env
+    environment:
+        - DNSDOCK_IMAGE=console
+        - SSH_AUTH_SOCK=/tmp/agent.sock
+    working_dir: /srv
+    restart: always
+
+database:
+    container_name: aniveto_database
+    image: postgres:9.5
+    env_file:
+        - ./docker/docker-compose.env
+    environment:
+        - DNSDOCK_IMAGE=db
+    volumes_from:
+      - data

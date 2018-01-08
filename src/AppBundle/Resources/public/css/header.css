@@ -1,0 +1,22 @@
+header{
+    height:100px;
+    margin: 10px;
+}
+
+header .accroche {
+    font-style: italic;
+    padding-top: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+header .phone{
+    font-weight:bold;
+    font-size:20px;
+}
+
+@media (max-width: 575px) {
+    header .accroche {
+        font-size:12px;
+    }
+}

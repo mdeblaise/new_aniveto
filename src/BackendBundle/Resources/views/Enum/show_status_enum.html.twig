@@ -1,0 +1,6 @@
+{% extends "SonataAdminBundle:CRUD:base_show_field.html.twig" %}
+{% block field %}
+    {% spaceless %}
+        <span class="{{ value|enum_status_color }}">{{ value|enum_status }}</span>
+    {% endspaceless %}
+{% endblock %}

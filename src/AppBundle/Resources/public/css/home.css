@@ -1,0 +1,99 @@
+#bgImage {
+    background: url('../img/home/bg.jpg') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-width: 380px;
+}
+
+.section-hero {
+    position: relative;
+}
+
+.section-banner {
+    display: none;
+}
+
+.section-banner-title {
+    color: #fff;
+    line-height: 2.4rem;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.section-hero-title {
+    padding: .5rem 0;
+    color: #fff;
+}
+
+.section-hero-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0;
+    margin-top: 0;
+}
+
+.section-hero-title-main {
+    font-size: 1.5rem;
+}
+
+.section-hero-title-sub {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.section-image-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#home-reassurance button {
+    font-size: 30px;
+}
+
+#home-avantage h3 {
+    font-size: 18px;
+}
+
+@media (min-width: 576px) {
+    .section-hero{
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+    .section-hero-title-sub {
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+    }
+
+    .section-image-mobile {
+        display: none;
+    }
+
+    .section-hero-title-main {
+        font-size: 2rem;
+    }
+
+    .section-hero-container {
+        padding: 4rem 0;
+        background: transparent;
+        margin-top: 0;
+    }
+
+    .section-hero-title {
+        padding: 0 0 1rem;
+    }
+
+    .section-banner {
+        display: block;
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-hero{
+        background-image: none !important;
+    }
+}

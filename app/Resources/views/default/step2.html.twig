@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Breadcrum -->
+    <div class="row bs-wizard col-lg-4 offset-md-4" style="border-bottom:0;">
+        <div class="col-4 bs-wizard-step complete">
+          <div class="text-center bs-wizard-stepnum">Mon profil</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+        </div>
+
+        <div class="col-4 bs-wizard-step disabled"><!-- complete -->
+          <div class="text-center bs-wizard-stepnum">Mon animal</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+        </div>
+
+        <div class="col-4 bs-wizard-step disabled"><!-- complete -->
+          <div class="text-center bs-wizard-stepnum">Mon tarif</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+        </div>
+    </div>
+
+    <form action="{{ path('app.profil', {id: id}) }}" method="post" class="container-fluid py-3">
+        {{ form_widget(form._token) }}
+
+        <div class="form-group row">
+            <div class="col-lg-4 offset-md-4">
+                <label>{{ form_label(form.gender) }}</label>
+                {{ form_widget(form.gender, {
+                    attr: { class: 'form-control'}
+                })}}
+                {{ form_errors(form.gender) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-4 offset-md-4">
+                <label>{{ form_label(form.lastname) }}</label>
+                {{ form_widget(form.lastname, {
+                    attr: { class: 'form-control'}
+                })}}
+                {{ form_errors(form.lastname) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-4 offset-md-4">
+                <label>{{ form_label(form.firstname) }}</label>
+                {{ form_widget(form.firstname, {
+                    attr: { class: 'form-control'}
+                })}}
+                {{ form_errors(form.firstname) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-4 offset-md-4">
+                <label>{{ form_label(form.dateOfBirth) }}</label>
+                {{ form_widget(form.dateOfBirth, {
+                    attr: { class: 'form-control'}
+                })}}
+                {{ form_errors(form.dateOfBirth) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-4 offset-md-4">
+                <label>{{ form_label(form.phone) }}</label>
+                {{ form_widget(form.phone, {
+                    attr: { class: 'form-control'}
+                })}}
+                {{ form_errors(form.phone) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-4 offset-md-4">
+                <label>{{ form_label(form.street) }}</label>
+                {{ form_widget(form.street, {
+                    attr: { class: 'form-control'}
+                })}}
+                {{ form_errors(form.street) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-4 offset-md-4">
+                <label>{{ form_label(form.postcode) }}</label>
+                {{ form_widget(form.postcode, {
+                    attr: { class: 'form-control'}
+                })}}
+                {{ form_errors(form.postcode) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-4 offset-md-4">
+                <label>{{ form_label(form.city) }}</label>
+                {{ form_widget(form.city, {
+                    attr: { class: 'form-control'}
+                })}}
+                {{ form_errors(form.city) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-lg-4 offset-md-4">
+                <input type="submit" class="btn btn-large btn-primary-green btn-block" value="{{ 'profil.next'|trans }}" />
+            </div>
+        </div>
+    </form>
+
+    <!-- Help -->
+    <div class="pt-5">
+        <div class="mk-help">
+            <h4 class="text-center">Besoin d'aide ? Appelez-nous !</h4>
+            <h1 class="text-center">09 70 100 500</h1>
+        </div>
+    </div>
+
+{% endblock %}

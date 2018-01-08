@@ -1,0 +1,7 @@
+security:
+    login:
+        title: Connexion
+        username: login
+        password: Mot de passe
+        submit: Valider
+        remember_me: Se souvenir de moi
